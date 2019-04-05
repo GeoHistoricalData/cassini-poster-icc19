@@ -141,13 +141,29 @@
 
  \begin{tikzpicture}[remember picture, overlay]
       \node[anchor=north west] at (0,7.5){%
-        \includegraphics[width=61cm]{gfx/maplegend.pdf}};
+        \includegraphics[width=61cm]{gfx/maplegend.png}};
 \end{tikzpicture}
 
 \begin{minipage}[b]{75cm}
 \section{\normalfont \textsc{Retrieved geo-historical features}: some statistics}
 \begin{multicols}{3}
 \setlength{\columnsep}{80pt}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[]
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+                & \multicolumn{2}{c}{Cassini's coordinates ('toises')}                                                & \multicolumn{2}{c}{WGS84 coordinates (degrees)}              \\ \midrule
+                & \multicolumn{1}{l}{Distance to the central meridian} & \multicolumn{1}{l}{... to the perpendicular} & \multicolumn{1}{l}{Latitude} & \multicolumn{1}{l}{Longitude} \\
+top left corner & 20$\sim$000                                          & 162$\sim$500                                 & 45°59'9.98''N                & 2°52'23.60''E                 \\
+top right       & 60$\sim$000                                          & 162$\sim$500                                 & 45°58'39.6''N                & 3°50'48.22''E                 \\
+lower-left      & 20$\sim$000                                          & 187$\sim$500                                 & 45°32'52.36''N               & 2°50'9.38''E                  \\
+lower-right     & 60$\sim$000                                          & 187$\sim$500                                 & 45°32'21.11''N               & 3°20'03.97''E                 \\ \bottomrule
+\end{tabular}
+\caption{Full map footprint}
+\label{my-label}
+\end{table}
 
 %\tiny{a variety of symbols mark smaller settlements: churches, wind and water mills, gallows and other works of man. Residences of nobility or gentry.
 
@@ -167,7 +183,7 @@
 
 \begin{tabular}{l|cccccccc|c|ccccc|c|r}
 
-& \multicolumn{8}{c|}{Landscape feature}
+& \multicolumn{8}{c|}{$\overbrace{        }{Landscape feature}$}
 & 
 & \multicolumn{5}{c|}{Hydrography}
 &
