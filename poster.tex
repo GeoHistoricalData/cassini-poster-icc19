@@ -1,5 +1,3 @@
-%%%%%%%% Préambule - o
-
 \documentclass[portrait, A0]{sciposter}
 \usepackage{ebgaramond}
 \setsansfont{EB Garamond}
@@ -43,26 +41,18 @@
 %%% Figures
 
 \usepackage{graphicx}
-\usepackage{subcaption}
-
-% \usepackage[latin1]{inputenc}
-% \usepackage[cyr]{aeguill}
-% \usepackage[francais]{babel}
-% %\usepackage{garamond}
+%\usepackage{subcaption}
 
 \usepackage{blindtext}
 \usepackage[inline]{enumitem}
-\usepackage{xcolor}
 
-
-\usepackage[polutonikogreek, english, ngerman, french]{babel}
+\usepackage[english, french]{babel}
 \usepackage[french=guillemets]{csquotes}
 
 % Personnalisations diverses 
 \addto\captionsfrench{\renewcommand{\figurename}{\textsc{Map}}}
 
 % Ecrire les unités  edmesur 
-
 \usepackage{siunitx}
 
 %------------------------------------------------			
@@ -71,9 +61,7 @@
 
 \title{Index toponymique de la Planche 52}
 
-\institute 
-{EHESS
-}
+\institute{EHESS}
 
 \rightlogo[1]{gfx/village.pdf}
 \leftlogo[1]{}
@@ -85,15 +73,6 @@
 
 \usepackage[a0,frame,axes,cross,pdftex,center]{crop}
 \usepackage{layout}
-
-
-%%%%%%%% Japonais
-
-%\usepackage[overlap, CJK]{ruby}
-%\CJKencfamily{JIS}{song}
-
-\usepackage{xeCJK}
-%\setCJKmainfont{AozoraMinchoRegular.ttf}
 
 \begin{document}
 \conference{\bf Index toponymique de la Planche 52 - épreuves V1 (\today) - à corriger}
@@ -159,9 +138,14 @@
 \tiny{
 a variety of symbols mark smaller settlements: churches, wind and water mills, gallows and other works of man. Residences of nobility or gentry.
 
-\og The divided horizontal semi-circles in brass were fitted with telescopic alidades, and micrometer reading allowed angles to be observed with considerable accuracy. Beacons, and sometimes lights, were used for observation marks. The topographic detail was treated more summarily: though the plane table was commonly in use by the 'ingenieur géographes', the body of mi
-
-\suy surveyors, Cassini's men who carried out the minor triangulation sketched the details by estimation or by pacing, and worked this up in the office. Often they were content to indicate slopes by the letters D or F ('douce' or 'forte') \fg [Crone 1953:131]}bs%eclitartion{Triangulation \& projection}
+\og
+The divided horizontal semi-circles in brass were fitted with telescopic alidades, and micrometer reading allowed angles to be observed with considerable accuracy.
+Beacons, and sometimes lights, were used for observation marks.
+The topographic detail was treated more summarily: though the plane table was commonly in use by the 'ingenieur géographes', the body of military surveyors, Cassini's men who carried out the minor triangulation sketched the details by estimation or by pacing, and worked this up in the office.
+Often they were content to indicate slopes by the letters D or F ('douce' or 'forte')
+\fg [Crone 1953:131]
+}
+%bs%eclitartion{Triangulation \& projection}
 %\subsection{Julien}
 \footnotesize
 \captionof{table}{Distribution of areas by land use type in the 52\up{nd} sheet of the Cassini map (1759-1777)}\label{tab:stats}
@@ -195,7 +179,7 @@ Linear lenght (km)&-&-&-&-&-&-&-&-&-&-&-&-&-
 %\begin{center}
 \footnotesize
 
-\captionof{table}{Map symbols census in the 52\up{nd} sheet of the Cassini map (1759-1777)}\label{tab:stats}
+\captionof{table}{Map symbols census in the 52\up{nd} sheet of the Cassini map (1759-1777)}\label{tab:symbols}
 %\vspace{0.25cm}
 \setcellgapes{2pt}
 \begin{tabular}{cccccccccccccccc}
@@ -285,7 +269,7 @@ The history of cartography has been largely based on critical \emph{facsimile} e
 
 \begin{center}
  \captionof{figure}{\scriptsize{(a) a view on the original Cassini map of France (sheet 52, 1759-1777) and (b) the extracted vector data mapped with the \og Cassini \fg map style (2019)}}
- \includegraphics[width=21cm]{gfx/Fantome52extraits.png}
+ \includegraphics[width=21cm]{gfx/Fantome52extraits}
  \end{center}
 
 \scriptsize Proposition Pascal : établir la liste des couches QGis nécessaires à la construction de l'image issue de la base de donnée et les principaux problèmes liés à la conception (gérer les superpositions, la place des toponymes, le choix des couleurs, la généralisation de certains thèmes, etc...
