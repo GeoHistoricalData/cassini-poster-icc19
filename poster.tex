@@ -1,4 +1,4 @@
-\documentclass[portrait, A0]{sciposter}
+ \documentclass[portrait, A0]{sciposter}
 \usepackage{ebgaramond}
 \setsansfont{EB Garamond}
 \usepackage{fontspec}
@@ -25,6 +25,7 @@
 \usepackage{array,multirow,makecell}
 \setcellgapes{1pt}
 \makegapedcells
+\usepackage{booktabs}
 
 % Réglages fins
 \setlength{\parindent}{2em}
@@ -53,7 +54,7 @@
 % Personnalisations diverses 
 \addto\captionsfrench{\renewcommand{\figurename}{\textsc{Map}}}
 
-% Ecrire les unités  edmesur 
+% Ecrire les unités  de mesure 
 \usepackage{siunitx}
 
 %------------------------------------------------			
@@ -102,7 +103,7 @@
 
 %\section{Abstract}
 \section*{\normalfont B. \textsc{Duménieu}, J. \textsc{Chadeyron}, P. \textsc{Cristofoli}, J. \textsc{Perret} and S. \textsc{Baciocchi}, in collaboration with S. Gomis, M. Gribaudi, I. Langlois, C. Motte and M.-C. Vouloir}
-\lettrine{A}ntique maps are full of engraved geo-historical features. They provide past representations of the geographical space, favored by historians and social scientists for their uniqueness and coherence. Working on a GIS dedicated to the history of French territory, we extracted spatial information from Cassini’s \textit{Carte de France} as vector data. Based on the first geodetic survey of France [1, 4], this well-known map has been drawn on 182 paper sheets of size 610 x 955~mm at the scale of 1:86~400 or 1 line for 100~toises (\textit{i.e.} 1 inch to 1.36 miles). It depicts the French territory with fine-grained information about populated and named places, settlements, landscape features, hydrographic, ecclesiastical and road networks [3, 5, 6, 7]. As a case study, the sheet numbered 52 provided more than 6,800 spatial footprints that we have stored as a geographical database. Following the distinction made by Cassini himself between \og geometric \fg and \og topographic \fg entities, our geographical database is composed of two kinds of data, namely 1) Triangulated Geographical Entities (\og geometric \fg entities in Cassini’s own terms) whose geodetic properties are partly documented and 2) Relative Geographical Entities (\og topographic \fg in Cassini’s terms) which are dependent on and located relative to the former (Map. \ref{map:triangulated-relative}). Those entities are analytically distinct but come together from a same and single artifact, \emph{i.e.} the primary source they have been engraved in during the mapmaking process (Map. \ref{map:contours}). Because this process of embeddedness is not fully documented, retrieving both classes of entities called for a cautious cartographic visualization with similar semiological rules and aesthetics as the original historical map. This \og Cassini's Mapping Style \fg allows to keep the cartographic properties of the geo-historical data extracted from this primary source: generalisation, scale, spatial granularity and the overall intentions of the mapmakers [2]. Often neglected, such properties are constitutive components and dimensions of the mapping style which forms the context and gives crucial information on the accuracy and the relationships between geo-historical data enclosed in. Our GIS-based map (Map. \ref{GIS-based map}),  which comes with its own legend and some statistics (Tab. \ref{tab:stats} and \ref{tab:symbols}), provides a renewed cartographic visualization of the entire sheet 52. It reveals unnoticed cartographic entities that were hardly legible in the original map (Fig. 4a-b).\\
+\lettrine{A}ntique maps are full of engraved geo-historical features. They provide past representations of the geographical space, favored by historians and social scientists for their uniqueness and coherence. Working on a GIS dedicated to the history of French territory, we extracted spatial information from Cassini’s \textit{Carte de France} as vector data. Based on the first geodetic survey of France [1, 4], this well-known and monumental map has been drawn on 182 paper sheets of size 610 x 955~mm at the scale of 1:86~400 or 1 line for 100~toises (\textit{i.e.} 1 inch to 1.36 miles). It depicts the French territory with fine-grained information about populated and named places, settlements, landscape features, hydrographic, ecclesiastical and road networks [3, 5, 6, 7]. As a case study, the sheet numbered 52 provided more than 6,800 spatial footprints that we have stored as a geographical database. Following the distinction made by Cassini himself between \og geometric \fg and \og topographic \fg entities, our geographical database is composed of two families of data, namely 1) Triangulated Geographical Entities (\og geometric \fg entities in Cassini’s own terms) whose geodetic properties are partly documented (Map. \ref{map:contours}) and 2) Relative Geographical Entities (\og topographic \fg in Cassini’s terms) which are dependent on and located relative to the former (Map. \ref{map:triangulated-relative}). Those entities are analytically distinct but come together from a same and single artifact, \emph{i.e.} the primary source they have been engraved in during the mapmaking process. Because this process of embeddedness is not fully documented, retrieving both classes of entities called for a cautious cartographic visualization with similar semiological rules and aesthetics as the original historical map. This \og Cassini's Mapping Style \fg allows to keep the cartographic properties of the geo-historical data extracted from this primary source: generalisation, scale, spatial granularity and the overall intentions of the mapmakers [2]. Often neglected, such properties are constitutive components and dimensions of the mapping style which forms the context of and gives crucial information on the accuracy and the relationships between geo-historical data enclosed in. Our GIS-based reconstructed map (Map. \ref{GIS-based map}),  which comes with its own legend and descriptive statistics (Tab. \ref{tab:stats} and \ref{tab:symbols}), provides a renewed cartographic visualization of the entire sheet 52. It reveals unnoticed cartographic entities that were hardly legible in the original map (Fig. 4a-b).\\
 \vfill
 
 
@@ -129,10 +130,10 @@
 %%%%
 
 \begin{minipage}[b]{75cm}
-  \section{\normalfont \textsc{Digital reconstruction of \og Carte générale \textsc{\textit{\&}} particulière de la France \fg } with a  \og Cassini \fg map style (2019)}
+  \section{\normalfont \textsc{Digital reconstruction of the \og Carte générale \textsc{\textit{\&}} particulière de la France \fg } with a  \og Cassini \fg map style (2019)}
 \begin{center}
 \captionof{figure}{GIS-based cartographic visualization of the \og Carte générale \textsc{\textit{\&}} particulière de la France \fg, \textsc{n}\up{o} 52 Clermont en Auvergne. F\up{le} 110: 1759-1777\protect\footnotemark}
-  \footnotetext{\up{1}. The original historical map has been geo-referenced, vectorized and digitally rendered at a decreased scale of 1: xx~xxx under QGIS and \LaTeX ~by the team \textsc{GeoHistoricalData} (EHESS / IGN / UCA) in 2016-2018: Nathalie \textsc{Abadie}, Stéphane \textsc{Baciocchi}, Pierre \textsc{Boivin}, Julien \textsc{Chadeyron}, Pascal \textsc{Cristofoli}, Jean-Michel \textsc{Delaveau}, Bertrand \textsc{Duménieu}, Stéphane \textsc{Gomis}, Maurizio \textsc{Gribaudi}, Isabelle \textsc{Langlois}, Claude \textsc{Motte}, Julien \textsc{Perret} \textsc{\textit{\&}} Marie-Christine \textsc{Vouloir}. Printed in Saint-Mandé in January 2019 by Thierry \textsc{Chaffaud} and Régis \textsc{Fiol} in the IGN Printed Products Manufacturing Department. With the support of the Centre de Recherches Historiques (EHESS/CNRS), the Centre d'Histoire \og Espaces \& Cultures \fg (UCA), the Laboratoire des Sciences et Technologies de l'Information Géographique - LaSTIG (IGN), the Laboratoire de Démographie et d'Histoire Sociale (EHESS - Centre d) recherch eehistori uqsesand the SoDUCo project (ANR).}
+  \footnotetext{\up{1}. The original historical map has been geo-referenced, vectorized and digitally rendered at a decreased scale of 1: xx~xxx under QGIS and \LaTeX ~by the team \textsc{GeoHistoricalData} (EHESS / IGN / UCA) in 2016-2018: Nathalie \textsc{Abadie}, Stéphane \textsc{Baciocchi}, Pierre \textsc{Boivin}, Julien \textsc{Chadeyron}, Pascal \textsc{Cristofoli}, Jean-Michel \textsc{Delaveau}, Bertrand \textsc{Duménieu}, Stéphane \textsc{Gomis}, Maurizio \textsc{Gribaudi}, Isabelle \textsc{Langlois}, Claude \textsc{Motte}, Julien \textsc{Perret} \textsc{\textit{\&}} Marie-Christine \textsc{Vouloir}. Printed in Saint-Mandé in January 2019 by Thierry \textsc{Chaffaud} and Régis \textsc{Fiol} in the IGN Printed Products Manufacturing Department. With the support of the Centre de Recherches Historiques (EHESS/CNRS), the Centre d'Histoire \og Espaces \& Cultures \fg (UCA), the Laboratoire des Sciences et Technologies de l'Information Géographique - LaSTIG (IGN), the Laboratoire de Démographie et d'Histoire Sociale (EHESS - Centre de Recherches Historiques) and the SoDUCo project (ANR).}
  \includegraphics[width=75cm]{gfx/cassini_52_lr.pdf}
  \label{GIS-based map}
  \vfill
@@ -145,24 +146,24 @@
 \end{tikzpicture}
 
 \begin{minipage}[b]{75cm}
-\section{\normalfont \textsc{Retrieved geo-historical features}: some statistics}
+\section{\normalfont \textsc{Retrieved geo-historical features}: descriptive statistics about the 52\up{nd} sheet of the Cassini map (1759-1777)}
 \begin{multicols}{3}
 \setlength{\columnsep}{80pt}
-
+\footnotesize
 % Please add the following required packages to your document preamble:
 % \usepackage{booktabs}
 \begin{table}[]
 \begin{tabular}{@{}lcccc@{}}
 \toprule
-                & \multicolumn{2}{c}{Cassini's coordinates ('toises')}                                                & \multicolumn{2}{c}{WGS84 coordinates (degrees)}              \\ \midrule
-                & \multicolumn{1}{l}{Distance to the central meridian} & \multicolumn{1}{l}{... to the perpendicular} & \multicolumn{1}{l}{Latitude} & \multicolumn{1}{l}{Longitude} \\
-top left corner & 20$\sim$000                                          & 162$\sim$500                                 & 45°59'9.98''N                & 2°52'23.60''E                 \\
-top right       & 60$\sim$000                                          & 162$\sim$500                                 & 45°58'39.6''N                & 3°50'48.22''E                 \\
-lower-left      & 20$\sim$000                                          & 187$\sim$500                                 & 45°32'52.36''N               & 2°50'9.38''E                  \\
-lower-right     & 60$\sim$000                                          & 187$\sim$500                                 & 45°32'21.11''N               & 3°20'03.97''E                 \\ \bottomrule
+                & \multicolumn{2}{c}{Projected coordinates (toises)}                                                & \multicolumn{2}{c}{Geographic coordinates (degrees)}              \\ \midrule
+                & \multicolumn{1}{l}{Distance to the central meridian} & \multicolumn{1}{l}{... to its perpendicular} & \multicolumn{1}{c}{Latitude} & \multicolumn{1}{c}{Longitude} \\
+upper left corner & \num{20000}                                          & \num{162500}                                 & 45°59'9.98''N                & 2°52'23.60''E                 \\
+upper right       & \num{60000}                                          & \num{162500}                                 & 45°58'39.6''N                & 3°50'48.22''E                 \\
+bottom left      & \num{20000}                                        & \num{187500}                                & 45°32'52.36''N               & 2°50'9.38''E                  \\
+bottom right     & \num{60000}                                          & \num{187500}                                & 45°32'21.11''N               & 3°20'03.97''E                 \\ \bottomrule
 \end{tabular}
-\caption{Full map footprint}
-\label{my-label}
+\caption{Rectangular extent of the map in two coordinate systems : the Cassini projection (planar coordinates in \emph{toises}) and WGS84 (geographical coordinates in degrees).}
+\label{table:translation}
 \end{table}
 
 %\tiny{a variety of symbols mark smaller settlements: churches, wind and water mills, gallows and other works of man. Residences of nobility or gentry.
@@ -177,13 +178,13 @@ lower-right     & 60$\sim$000                                          & 187$\si
 %bs%eclitartion{Triangulation \& projection}
 %\subsection{Julien}
 \footnotesize
-\captionof{table}{Distribution of areas by land use type in the 52\up{nd} sheet of the Cassini map (1759-1777)}\label{tab:stats}
+\captionof{table}{Areas by land type use, lenght of hydrography and road networks }\label{tab:stats}
 
 \setcellgapes{2pt}
 
 \begin{tabular}{l|cccccccc|c|ccccc|c|r}
 
-& \multicolumn{8}{c|}{$\overbrace{        }{Landscape feature}$}
+& \multicolumn{8}{c|}{Landscape feature}
 & 
 & \multicolumn{5}{c|}{Hydrography}
 &
@@ -206,8 +207,8 @@ lower-right     & 60$\sim$000                                          & 187$\si
 &\textsc{Total}\\
 Features count&257&32&111&-&150&6&-&-&37&240&-&9&-&-&-&-\\
 Area sum (km\up{2})&\num{279}&\num{75}&\num{87}&\num{1368}&\num{142}&\num{0,6}&\num{0,8}&\num{1871}&\num{4}&\num{4}&\num{19}&\num{1,2}&-&-&-&\num{3852} km\up{2}\\
-\makecell[r]{\textit{\% Map area}}&\textit{7}&\textit{2}&\textit{2}&\textit{36}&\textit{4}&\textit{0}&\textit{0}&\textit{49}&\textit{0}&\textit{0}&\textit{0}&\textit{0}&&&&\textit{100 \%}\\
-Linear lenght (km)&-&-&-&-&-&-&-&-&-&-&-&-&\num{341}&\num{2841}&\num{624}&\num{3807} km
+% \makecell[r]{\textit{\% Map area}}&\textit{7}&\textit{2}&\textit{2}&\textit{36}&\textit{4}&\textit{0}&\textit{0}&\textit{49}&\textit{0}&\textit{0}&\textit{0}&\textit{0}&&&&\textit{100 \%}\\
+network lenght (km)&-&-&-&-&-&-&-&-&-&-&-&-&\num{341}&\num{2841}&\num{624}&\num{3807} km
 \end{tabular}
 
 %\subsection{Pascal}
@@ -218,7 +219,7 @@ Linear lenght (km)&-&-&-&-&-&-&-&-&-&-&-&-&\num{341}&\num{2841}&\num{624}&\num{3
 
 \captionof{table}{Map symbols census in the 52\up{nd} sheet of the Cassini map (1759-1777)}\label{tab:symbols}
 %\vspace{0.25cm}
-\setcellgapes{2pt}
+\setcellgapes{1pt}
 \begin{tabular}{cccccccccccccccc}
  %  \hline
 % & & & & & & & & & & & & &//
@@ -254,6 +255,7 @@ Linear lenght (km)&-&-&-&-&-&-&-&-&-&-&-&-&\num{341}&\num{2841}&\num{624}&\num{3
 \includegraphics[height=35pt]{gfx/moulin_a_vent.pdf}&
 \includegraphics[height=18pt]{gfx/justice.pdf}&
 \includegraphics[height=18pt]{gfx/cabane.pdf}&
+%\textsc{Total}\\
 \rotatebox{90}{\textsc{Total}}\\
 % \multicolumn{14}{|c|}{} \\
 % \hline
@@ -278,7 +280,7 @@ Linear lenght (km)&-&-&-&-&-&-&-&-&-&-&-&-&\num{341}&\num{2841}&\num{624}&\num{3
 \end{minipage}
 
 \begin{minipage}[b]{75cm}
-\section{\normalfont \textsc{Primary sources, mapmaking process \textit{\&} final result}}
+\section{\normalfont \textsc{Primary sources, original mapmaking process \textit{\&} renewed Cassini map style}}
 
 \begin{multicols}{3}
 \setlength{\columnsep}{80pt}
@@ -293,7 +295,7 @@ Linear lenght (km)&-&-&-&-&-&-&-&-&-&-&-&-&\num{341}&\num{2841}&\num{624}&\num{3
 \scriptsize Main primary sources: \textsc{BnF} (Paris) - Cartes et plans, GE C-22286 (Rés), \textit{Nouvelle carte qui comprend les principaux triangles qui servent de fondement à la description géométrique de la France, levée par ordre du Roy}, par mess. Maraldi et Cassini de Thury, 1744 ; Carthotèque de l'IGN (Saint-Mandé) - Minutes de la Carte Cassini (feuille 52) ; Registre < A > \textit{Registre des Ingénieurs et Vérificateurs, paraphé par nous, Directeurs de la carte de France}, le 15 juillet 1778, de Montigny, f.~94, 96 et 126 ; Registre  < E > -\textit{Copie du Journal de la Carte Générale de la France tenu par M\up{r}. [Jean-Charles] de Borda [, trésorier de la Société]}, commencé le 26 juin 1756 et fini le 1\up{er} juillet 1784.
 
 \begin{center}
- \captionof{figure}{\scriptsize{Successive drafts of field surveys, map corrections and revisions, 1759-1775}}
+ \captionof{figure}{\scriptsize{Successive drafts of field surveys, map corrections and revisions (1759-1775)}}
  \label{map:contours}
  \includegraphics[width=21cm]{gfx/Contours.png}
  \end{center}
@@ -303,15 +305,16 @@ Linear lenght (km)&-&-&-&-&-&-&-&-&-&-&-&-&\num{341}&\num{2841}&\num{624}&\num{3
 \textsc{From antique to renewed GIS-based hstorical map}
 
 
-The history of cartography has been largely based on critical \emph{facsimile} edition of old maps. We propose to extend this approach by producing GIS-Based maps that combine the restitution of old styles and the geomatic modelling of geographical data.
+
 
 \vfill
 
 \begin{center}
- \captionof{figure}{\scriptsize{(a) a view on the original Cassini map of France (sheet 52, 1759-1777) and (b) the extracted vector data mapped with the \og Cassini \fg map style (2019)}}
  \includegraphics[width=21cm]{gfx/Fantome52extraits}
+ \captionof{figure}{\scriptsize{(a) view on the original Cassini map of France (sheet 52, 1759-1777) and (b) the extracted vector data mapped with the \og Cassini \fg map style (2019)}}
  \end{center}
 
+\small \lettrine{H}istoriography of cartography has been largely, and for a long time, based on critical edition of old maps published as non georeferenced \emph{facsimile}. We propose to renew this approach by producing digital maps from vector geographic databases that combine the aesthetics and semiology of old mapping styles with the modelling and analysis capabilities of modern GIS.
 %\scriptsize Proposition Pascal : établir la liste des couches QGis nécessaires à la construction de l'image issue de la base de donnée et les principaux problèmes liés à la conception (gérer les superpositions, la place des toponymes, le choix des couleurs, la généralisation de certains thèmes, etc...
 \end{multicols}
 \end{minipage}
