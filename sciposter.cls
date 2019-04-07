@@ -288,7 +288,7 @@
   }
 
 \RequirePackage{graphics}
-\RequirePackage{color}
+\RequirePackage{xcolor}
 \RequirePackage{shadow}
 \RequirePackage{a0size}
 \RequirePackage{times}
@@ -321,6 +321,8 @@
   \setlength{\oddsidemargin}{0 cm}
   \setlength{\footskip}{0.65\papermargin}
 
+  \setlength{\marginparwidth}{0cm}
+  \setlength{\marginparsep}{0cm}
   \ifthenelse{\equal{\orientation}{landscape}}{
     \setlength{\logowidth}{0.12\textheight}
     }{
