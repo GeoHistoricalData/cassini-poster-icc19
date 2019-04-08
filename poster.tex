@@ -30,12 +30,16 @@
 \usepackage[inline]{enumitem}
 \usepackage[english, french]{babel}
 \usepackage[french=guillemets]{csquotes}
+\usepackage{caption}
 % Personnalisations diverses 
 \addto\captionsfrench{\renewcommand{\figurename}{\textsc{Map}}}
+% Force la suppression de l'espace avant ':'
+ \NoAutoSpaceBeforeFDP
+ 
 %------------------------------------------------		
 % Guillemets corrects, commande G
 \usepackage{xspace}
-\title{Engraved Footprints from the Past, 29th International Cartographic Conference, Tokio, Japan, 15–20 July 2019 - V1 (\today)}
+\title{\normalfont \emph{Engraved Footprints from the Past}, 29\up{th} International Cartographic Conference, Tokyo, Japan, 15–20 July 2019 - V1 (\today)}
 \institute{EHESS}
 %\rightlogo[1]{gfx/village.pdf}
 %\leftlogo[1]{}
@@ -61,7 +65,7 @@
 \begin{minipage}[t]{0.55\textwidth}
   \Huge
   \textsc{Engraved Footprints from the Past}\\~\\
-  \Large \textsc{Retrieving Cartographic Geo-Historical Data from Cassini’s \emph{Carte de France}, 1750 - 1789}
+  \Large \textsc{Retrieving Cartographic geohistorical Data from the Cassini \textit{Carte de France}, 1750 - 1789}
 \end{minipage}
 \begin{minipage}[t]{0.44\textwidth}
   \vspace*{-3.2cm}
@@ -74,8 +78,11 @@
 \begin{minipage}[b]{\textwidth}
   \setlength{\parindent}{-0em}
   \begin{multicols}{3}
-    \section*{\normalfont B. \textsc{Duménieu}, J. \textsc{Chadeyron}, P. \textsc{Cristofoli}, J. \textsc{Perret} and S. \textsc{Baciocchi}, in collaboration with S. Gomis, M. Gribaudi, I. Langlois, C. Motte and M.-C. Vouloir}
-    \lettrine{A}ntique maps are full of engraved geo-historical features. They provide past representations of the geographical space, favored by historians and social scientists for their uniqueness and coherence. Working on a GIS dedicated to the history of French territory, we extracted spatial information from Cassini’s \textit{Carte de France} as vector data. Based on the first geodetic survey of France [1, 4], this well-known and monumental map has been drawn on 182 paper sheets of size 610 x 955~mm at the scale of 1:86~400 or 1 line for 100~toises (\textit{i.e.} 1 inch to 1.36 miles). It depicts the French territory with fine-grained information about populated and named places, settlements, landscape features, hydrographic, ecclesiastical and road networks [3, 5, 6, 7]. As a case study, the sheet numbered 52 provided more than 6,800 spatial footprints that we have stored as a geographical database. Following the distinction made by Cassini himself between \og geometric \fg and \og topographic \fg entities, our geographical database is composed of two families of data, namely 1) Triangulated Geographical Entities (\og geometric \fg entities in Cassini’s own terms) whose geodetic properties are partly documented (Map. \ref{map:contours}) and 2) Relative Geographical Entities (\og topographic \fg in Cassini’s terms) which are dependent on and located relative to the former (Map. \ref{map:triangulated-relative}). Those entities are analytically distinct but come together from a same and single artifact, \emph{i.e.} the primary source they have been engraved in during the mapmaking process. Because this process of embeddedness is not fully documented, retrieving both classes of entities called for a cautious cartographic visualization with similar semiological rules and aesthetics as the original historical map. This \og Cassini's Mapping Style \fg allows to keep the cartographic properties of the geo-historical data extracted from this primary source: generalisation, scale, spatial granularity and the overall intentions of the mapmakers [2]. Often neglected, such properties are constitutive components and dimensions of the mapping style which forms the context of and gives crucial information on the accuracy and the relationships between geo-historical data enclosed in. Our GIS-based reconstructed map (Map. \ref{GIS-based map}),  which comes with its own legend and descriptive statistics (Tab. \ref{tab:stats} and \ref{tab:symbols}), provides a renewed cartographic visualization of the entire sheet 52. It reveals unnoticed cartographic entities that were hardly legible in the original map (Fig. 4a-b).\\
+    \section*{\normalfont B. \textsc{Duménieu}\up{a}, J. \textsc{Chadeyron}\up{b}, P. \textsc{Cristofoli}\up{a}, J. \textsc{Perret}\up{a,c} and S. \textsc{Baciocchi}\up{a}, in collaboration with S. Gomis, M. Gribaudi, I. Langlois, C. Motte and M.-C. Vouloir
+    \newline
+    \noindent \scriptsize \up{a} EHESS, CRH, bertrand.dumenieu@ehess.fr, stephane.baciocchi@ehess.fr, pascal.cristofoli@ehess.fr; \up{b} University of Clermont-Ferrand (UCA), julien.chadeyron@uca.fr; \up{c} Univ. Paris-Est, LASTIG STRUDEL, IGN, ENSG, julien.perret@ign.fr
+    }
+    \lettrine{A}ntique maps are full of engraved geohistorical features. They provide past representations of the geographical space, favored by historians and social scientists for their uniqueness and coherence. Working on a GIS dedicated to the history of the French territory, we extracted spatial information from the Cassini \textit{Carte de France} (full name \textit{Carte générale \textsc{\textit{\&}} particulière de la France}) as vector data. Based on the first geodetic survey of France [1, 4], this well-known and monumental map has been drawn on 182 paper sheets of size 610 x 955~mm at the scale of 1:86~400 or 1 line for 100~toises (\textit{i.e.} 1 inch to 1.36 miles). It depicts the French territory with fine-grained information about populated and named places, settlements, landscape features, hydrographic, ecclesiastical and road networks [3, 5, 6, 7]. As a case study, the sheet numbered 52 provided more than \num{6800} spatial footprints that we have stored as a geographical database. Following the distinction made by Cassini himself between \og geometric \fg and \og topographic \fg entities, our geographical database is composed of two families of data, namely 1) Triangulated Geographical Entities (\og geometric \fg entities in Cassini’s own terms) whose geodetic properties are partly documented (Map. \ref{map:contours}) Relative Geographical Entities (\og topographic \fg in Cassini’s terms) which are dependent on and located relative to the former (Map. \ref{map:triangulated-relative}). Those entities are analytically distinct but come together from a same and single artifact, \emph{i.e.} the primary source they have been engraved in during the mapmaking process. Because this process of embeddedness is not fully documented, retrieving both classes of entities called for a cautious cartographic visualization with similar semiological rules and aesthetics as the original historical map. This \og Cassini map style \fg preserves the cartographic properties of the geohistorical data extracted from this primary source: generalisation, scale, spatial granularity and the overall intentions of the mapmakers [2]. Often neglected, such properties are constitutive components and dimensions of the mapping style which forms the context of and gives crucial information on the accuracy and the relationships between geohistorical data enclosed in. Our GIS-based reconstructed map (Map. \ref{GIS-based map}),  which comes with its own legend and descriptive statistics (Tab. \ref{tab:stats} and \ref{tab:symbols}), provides a renewed cartographic visualisation of the entire sheet 52. It reveals unnoticed cartographic entities that were hardly legible in the original map (Fig. 4a-b).\\
     \vfill
     \small
     [1] C.-F. Cassini (1783). \textit{Description géométrique de la France}. Imprimerie Desaint.
@@ -87,43 +94,40 @@
     [7] J. Perret, M. Gribaudi, and M. Barthelemy. Roads and cities of 18\up{th} century france. \textit{Scientific data}, 2 :150048, 2015.
     \begin{center}
       \captionsetup{type=figure}
-      \caption{Triangulated and Relative Geographical Entities in the 52\up{nd} sheet of the Cassini map (1759-1777)}
+      \caption{Analytical map of the geographical features surveyed for the making of the 52\up{nd} sheet of the \textit{Carte de France}, whether triangulated (316 red dots) or relative (\num{6565} grey crosses).}
       \label{map:triangulated-relative}
       \vspace{-0.5cm}\includegraphics[width=0.9\linewidth,trim= 0cm 0cm 0cm 2cm, clip]{gfx/Triangulated.png}
-      \vfill
-      \footnotesize
-      Analytical map of all the geographical features surveyed, whether triangulated (k=316 in red) or relative (n=6,565 in grey).
     \end{center}
   \end{multicols}
 \end{minipage}
 %%%%
 
 \begin{minipage}[b]{\textwidth}
-  \section{\normalfont \textsc{Digital reconstruction of the \og Carte générale \textsc{\textit{\&}} particulière de la France \fg } with a  \og Cassini \fg map style (2019)}
+  \section{\normalfont \textsc{A digital map à la Cassini: reconstruction of the \textit{Carte générale \& particulière de la France} } (2019)}
   \begin{center}
     \captionsetup{type=figure}
-    \caption{GIS-based cartographic visualization of the \og Carte générale \textsc{\textit{\&}} particulière de la France \fg, \textsc{n}\up{o} 52 Clermont en Auvergne. F\up{le} 110: 1759-1777\protect\footnotemark}
+    \caption{Vector geographic data extracted from the georeferenced 52\up{nd} sheet of the \textit{Carte de France} rendered as a digital map mimicking the original style of the Cassini map.\protect\footnotemark}
     \label{GIS-based map}
     \vspace{-0.5cm}
-    \includegraphics[width=0.98\textwidth,trim= 0cm 2cm 0cm 2cm, clip]{gfx/cassini_52_lr.pdf}
-    \vfill
-    \footnotetext{\up{1}. The original historical map has been geo-referenced, vectorized and digitally rendered at a decreased scale of 1: xx~xxx under QGIS and \LaTeX ~by the team \textsc{GeoHistoricalData} (EHESS / IGN / UCA) in 2016-2018: Nathalie \textsc{Abadie}, Stéphane \textsc{Baciocchi}, Pierre \textsc{Boivin}, Julien \textsc{Chadeyron}, Pascal \textsc{Cristofoli}, Jean-Michel \textsc{Delaveau}, Bertrand \textsc{Duménieu}, Stéphane \textsc{Gomis}, Maurizio \textsc{Gribaudi}, Isabelle \textsc{Langlois}, Claude \textsc{Motte}, Julien \textsc{Perret} \textsc{\textit{\&}} Marie-Christine \textsc{Vouloir}. Printed in Saint-Mandé in January 2019 by Thierry \textsc{Chaffaud} and Régis \textsc{Fiol} in the IGN Printed Products Manufacturing Department. With the support of the Centre de Recherches Historiques (EHESS/CNRS), the Centre d'Histoire \og Espaces \& Cultures \fg (UCA), the Laboratoire des Sciences et Technologies de l'Information Géographique - LaSTIG (IGN), the Laboratoire de Démographie et d'Histoire Sociale (EHESS - Centre de Recherches Historiques) and the SoDUCo project (ANR).}
+    \includegraphics[width=1\textwidth,trim= 0cm 0cm 0cm 0.2cm, clip]{gfx/cassini_52_lr.png}
+    \vspace{0mm}
+    \footnotetext{\up{1}. The original historical map has been georeferenced, vectorised and digitally rendered at a decreased scale of 1: xx~xxx under QGIS and \LaTeX ~by the team \textsc{GeoHistoricalData} (EHESS / IGN / UCA) in 2016-2018: Nathalie \textsc{Abadie}, Stéphane \textsc{Baciocchi}, Pierre \textsc{Boivin}, Julien \textsc{Chadeyron}, Pascal \textsc{Cristofoli}, Jean-Michel \textsc{Delaveau}, Bertrand \textsc{Duménieu}, Stéphane \textsc{Gomis}, Maurizio \textsc{Gribaudi}, Isabelle \textsc{Langlois}, Claude \textsc{Motte}, Julien \textsc{Perret} \textsc{\textit{\&}} Marie-Christine \textsc{Vouloir}. Printed in Saint-Mandé, France, in January 2019 by Thierry \textsc{Chaffaud} and Régis \textsc{Fiol} at the IGN France Printed Products Manufacturing Department. With the support of the \textit{Centre de Recherches Historiques} (EHESS/CNRS), the \textit{Centre d'Histoire \og Espaces \& Cultures \fg }(UCA), the \textit{Laboratoire des Sciences et Technologies de l'Information Géographique} - LaSTIG (IGN), the \textit{Laboratoire de Démographie et d'Histoire Sociale (EHESS - Centre de Recherches Historiques)} and the SoDUCo project (ANR).}
   \end{center}
 \end{minipage}
 \begin{tikzpicture}[remember picture, overlay]
-  \node[anchor=north west] at (0,6.5){%
+  \node[anchor=north west] at (0.9,6.7){%
     \includegraphics[width=0.8\textwidth]{gfx/maplegend.png}};
 \end{tikzpicture}
 
 \vspace{-1cm}
 \begin{minipage}[b]{\textwidth}
-  \section{\normalfont \textsc{Retrieved geo-historical features}: descriptive statistics about the 52\up{nd} sheet of the Cassini map (1759-1777)}
+  \section{\normalfont \textsc{Retrieved geohistorical features}: descriptive statistics on the 52\up{nd} sheet of the \textit{Carte de France} (1759-1777)}
   \begin{multicols}{3}
     \setlength{\columnsep}{80pt}
     \footnotesize
     \begin{center}
       \captionsetup{type=table}
-      \caption{Rectangular extent of the map in two coordinate systems : the Cassini projection (planar coordinates in \emph{toises}) and WGS84 (geographical coordinates in degrees).}
+      \caption{Rectangular extent of the map in two coordinate systems: the Cassini map projection and WGS84.}
       \label{table:translation}
       \begin{tabular}{@{}lcccc@{}}
         \toprule
@@ -250,28 +254,28 @@
   \section{\normalfont \textsc{Primary sources, original mapmaking process \textit{\&} renewed Cassini map style}}
   \begin{multicols}{3}
     \setlength{\columnsep}{80pt}
-    \textsc{Toward a critical edition} \small{of the...}
+    \textsc{Toward an in-depth reverse engineering of the Cassini map}
     \vfill
     \normalsize
-    \lettrine{O}riginal 610 x 955~mm colour map (format \og grand aigle \fg) on a scale of 1: 86~400 or 1 line for 100 toises. Drawn up from 1759 to 1777 under the direction of César François \textsc{Cassini de Thury}, Charles Étienne Louis \textsc{Camus} (then Rodolphe \textsc{Perronet}) and Étienne \textsc{Mignot de Montigny}. \textbf{Triangulated from 1759 to 1775} by P.~de~\textsc{La~Court} (\textsc{ne} partial, 1759), François \textsc{Pasumot}, Claude \textsc{Pezet}, \textsc{Dallier} and \textsc{Dailley} (\textsc{no-so}, c. 1764-1766), Louis \textsc{Le~Bel} (\textsc{se}, 1766-1768; \textsc{ne} and \textsc{so}, 1769), \textsc{Dubois} \textit{\&} Louis \textsc{Cabay} (\textsc{no-ne}, 1772-1773), Q\textsc{uerry} \textit{\&} François \textsc{La~Ruelle} (\textsc{ne}, 1774-1775). \textbf{Field checked, 1767-1774} by P. \textsc{Renault} (\textsc{se}, 1767-1768), Q\textsc{uerry} \textit{\&} F.~\textsc{La~Ruelle} (\textsc{no-ne-so}, 1774). \textbf{Map engraved in Paris in 1774-1777} by Louis \textsc{Capitaine} son (for the plan, 1774-1776) and Nicolas \textsc{Bourgoin} (for the letter, 1775-1777). Printed intaglio on the press of Paris Observatory in 1777 on behalf of the Compagnie associée pour la Carte générale de la France. Presented to the King and the Royal Court, Versailles, April 16, 1777 (\og silk printing \fg).\\
+    \lettrine{O}riginal 610 x 955~mm colour map (\og grand aigle \fg format) on a scale of 1: 86~400 or 1 line for 100 toises. Drawn up from 1759 to 1777 under the direction of César François \textsc{Cassini de Thury}, Charles Étienne Louis \textsc{Camus} (then Rodolphe \textsc{Perronet}) and Étienne \textsc{Mignot de Montigny}. \textbf{Triangulated from 1759 to 1775} by P.~de~\textsc{La~Court} (\textsc{ne} partial, 1759), François \textsc{Pasumot}, Claude \textsc{Pezet}, \textsc{Dallier} and \textsc{Dailley} (\textsc{no-so}, c. 1764-1766), Louis \textsc{Le~Bel} (\textsc{se}, 1766-1768; \textsc{ne} and \textsc{so}, 1769), \textsc{Dubois} \textit{\&} Louis \textsc{Cabay} (\textsc{no-ne}, 1772-1773), Q\textsc{uerry} \textit{\&} François \textsc{La~Ruelle} (\textsc{ne}, 1774-1775). \textbf{Field checked, 1767-1774} by P. \textsc{Renault} (\textsc{se}, 1767-1768), Q\textsc{uerry} \textit{\&} F.~\textsc{La~Ruelle} (\textsc{no-ne-so}, 1774). \textbf{Map engraved in Paris in 1774-1777} by Louis \textsc{Capitaine} son (for the plan, 1774-1776) and Nicolas \textsc{Bourgoin} (for the letter, 1775-1777). Printed intaglio on the press of Paris Observatory in 1777 on behalf of the \textit{Compagnie associée pour la Carte générale de la France}. Presented to the King and the Royal Court, Versailles, April 16, 1777 (\og silk printing \fg).\\
     \vfill
-    \scriptsize Main primary sources: \textsc{BnF} (Paris) - Cartes et plans, GE C-22286 (Rés), \textit{Nouvelle carte qui comprend les principaux triangles qui servent de fondement à la description géométrique de la France, levée par ordre du Roy}, par mess. Maraldi et Cassini de Thury, 1744 ; Carthotèque de l'IGN (Saint-Mandé) - Minutes de la Carte Cassini (feuille 52) ; Registre < A > \textit{Registre des Ingénieurs et Vérificateurs, paraphé par nous, Directeurs de la carte de France}, le 15 juillet 1778, de Montigny, f.~94, 96 et 126 ; Registre  < E > -\textit{Copie du Journal de la Carte Générale de la France tenu par M\up{r}. [Jean-Charles] de Borda [, trésorier de la Société]}, commencé le 26 juin 1756 et fini le 1\up{er} juillet 1784.
+    \scriptsize Main primary sources: \textsc{BnF} (Paris, France) - Map division, GE C-22286 (Rés), \textit{Nouvelle carte qui comprend les principaux triangles qui servent de fondement à la description géométrique de la France, levée par ordre du Roy, par mess. Maraldi et Cassini de Thury, 1744} ; IGN France map library (Saint-Mandé, France) - Drafts of the Cassini map (sheet 52) ; Registre < A > \textit{Registre des Ingénieurs et Vérificateurs, paraphé par nous, Directeurs de la carte de France}, le 15 juillet 1778, de Montigny, f.~94, 96 et 126 ; Registre  < E > -\textit{Copie du Journal de la Carte Générale de la France tenu par M\up{r}. [Jean-Charles] de Borda [, trésorier de la Société], commencé le 26 juin 1756 et fini le 1\up{er} juillet 1784.}
     \begin{center}
       \captionsetup{type=figure}
-      \caption{\scriptsize{Successive drafts of field surveys, map corrections and revisions (1759-1775)}}
+      \caption{\scriptsize{Successive drafts of field surveys, map corrections and reviews (1759-1775)}}
       \label{map:contours}
       \includegraphics[width=0.28\textwidth]{gfx/Contours}
     \end{center}
 ~\\
     \normalsize
-    \textsc{From antique to renewed GIS-based hstorical map}
+    \textsc{From antique to renewed GIS-based historical map}
     \vfill
     \begin{center}
       \captionsetup{type=figure}
-      \caption{\scriptsize{(a) view on the original Cassini map of France (sheet 52, 1759-1777) and (b) the extracted vector data mapped with the \og Cassini \fg map style (2019)}}
-      \includegraphics[width=0.28\textwidth]{gfx/Fantome52extraits}
+      \caption{\scriptsize{Vector geographic data extracted from the digitized and georeferenced original map (a) is arranged into GIS layers and composed to build the renewed version of the Cassini's Carte de France. Subfigures (b), (c) and (d) show an overview of the the 15-layers composition that results in the final rendering à la Cassini (e).}}
+      \includegraphics[width=0.28\textwidth]{gfx/mapmaking}
     \end{center}    
-    \small \lettrine{H}istoriography of cartography has been largely, and for a long time, based on critical edition of old maps published as non georeferenced \emph{facsimile}. We propose to renew this approach by producing digital maps from vector geographic databases that combine the aesthetics and semiology of old mapping styles with the modelling and analysis capabilities of modern GIS.
+    \small \lettrine{H}istoriography of cartography has long been based on critical edition of old maps published as non-georeferenced \textit{facsimile}. We propose to renew this approach by producing digital maps from vector geographic databases that combine the aesthetics and semiology of old mapping styles with the modelling capabilities of modern GIS.
     %\scriptsize Proposition Pascal : établir la liste des couches QGis nécessaires à la construction de l'image issue de la base de donnée et les principaux problèmes liés à la conception (gérer les superpositions, la place des toponymes, le choix des couleurs, la généralisation de certains thèmes, etc...
   \end{multicols}
 \end{minipage}
