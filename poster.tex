@@ -121,24 +121,22 @@
   \begin{multicols}{3}
     \setlength{\columnsep}{80pt}
     \footnotesize
-    \begin{table}[]
-      \begin{center}
-        \captionsetup{type=table}
-        \caption{Rectangular extent of the map in two coordinate systems : the Cassini projection (planar coordinates in \emph{toises}) and WGS84 (geographical coordinates in degrees).}
-        \label{table:translation}
-        \begin{tabular}{@{}lcccc@{}}
-          \toprule
-          & \multicolumn{2}{c}{Projected coordinates (toises)}                                                & \multicolumn{2}{c}{Geographic coordinates (degrees)}              \\
-          \midrule
-          & \multicolumn{1}{l}{Distance to the central meridian} & \multicolumn{1}{l}{... to its perpendicular} & \multicolumn{1}{c}{Latitude} & \multicolumn{1}{c}{Longitude} \\
-          upper left corner & \num{20000}                                          & \num{162500}                                 & 45°59'9.98''N                & 2°52'23.60''E                 \\
-          upper right       & \num{60000}                                          & \num{162500}                                 & 45°58'39.6''N                & 3°50'48.22''E                 \\
-          bottom left      & \num{20000}                                        & \num{187500}                                & 45°32'52.36''N               & 2°50'9.38''E                  \\
-          bottom right     & \num{60000}                                          & \num{187500}                                & 45°32'21.11''N               & 3°20'03.97''E                 \\
-          \bottomrule
-        \end{tabular}
-      \end{center}
-    \end{table}
+    \begin{center}
+      \captionsetup{type=table}
+      \caption{Rectangular extent of the map in two coordinate systems : the Cassini projection (planar coordinates in \emph{toises}) and WGS84 (geographical coordinates in degrees).}
+      \label{table:translation}
+      \begin{tabular}{@{}lcccc@{}}
+        \toprule
+        & \multicolumn{2}{c}{Projected coordinates (toises)}                                                & \multicolumn{2}{c}{Geographic coordinates (degrees)}              \\
+        \midrule
+        & \multicolumn{1}{l}{Distance to the central meridian} & \multicolumn{1}{l}{... to its perpendicular} & \multicolumn{1}{c}{Latitude} & \multicolumn{1}{c}{Longitude} \\
+        upper left corner & \num{20000}                                          & \num{162500}                                 & 45°59'9.98''N                & 2°52'23.60''E                 \\
+        upper right       & \num{60000}                                          & \num{162500}                                 & 45°58'39.6''N                & 3°50'48.22''E                 \\
+        bottom left      & \num{20000}                                        & \num{187500}                                & 45°32'52.36''N               & 2°50'9.38''E                  \\
+        bottom right     & \num{60000}                                          & \num{187500}                                & 45°32'21.11''N               & 3°20'03.97''E                 \\
+        \bottomrule
+      \end{tabular}
+    \end{center}
     \vfill    
     
     %\tiny{a variety of symbols mark smaller settlements: churches, wind and water mills, gallows and other works of man. Residences of nobility or gentry.
@@ -153,102 +151,98 @@
     %bs%eclitartion{Triangulation \& projection}
     %\subsection{Julien}
     \footnotesize
-    \begin{table}[]
-      \begin{center}
-        \captionsetup{type=table}
-        \caption{Areas by land type use, lenght of hydrography and road networks }\label{tab:stats}
-        \setcellgapes{2pt}
-        \begin{tabular}{l|cccccccc|c|ccccc|c|r}
-          & \multicolumn{8}{c|}{Landscape feature}
-          & 
-          & \multicolumn{5}{c|}{Hydrography}
-          &
-          &\\
-          &\includegraphics[height=40pt]{gfx/foret_couleur.png}
-          &\includegraphics[height=40pt]{gfx/marais_couleur.png}
-          &\includegraphics[height=40pt]{gfx/vigne_couleur.png}
-          &\includegraphics[height=40pt]{gfx/landes_couleur.png}
-          &\includegraphics[height=40pt]{gfx/broussailles_couleur.png}
-          & \includegraphics[height=30pt]{gfx/domaine_couleur.png}
-          &\includegraphics[height=35pt]{gfx/escarpement_couleur.png}
-          & \rotatebox{90} {\tiny{Farmland}}
-          &\includegraphics[height=35pt]{gfx/ville_couleur.png}
-          &\includegraphics[height=25pt]{gfx/etang_couleur.png}
-          &\includegraphics[height=35pt]{gfx/riviere_large_couleur.png}
-          &\includegraphics[height=30pt]{gfx/lac_couleur.png}
-          &\includegraphics[height=30pt]{gfx/riviere_medium_couleur.png}
-          &\includegraphics[height=30pt]{gfx/riviere_small_couleur.png}
-          &\includegraphics[height=35pt]{gfx/routes_couleur.png}
-          &\textsc{Total}\\
-          Features count&257&32&111&-&150&6&-&-&37&240&-&9&-&-&-&-\\
-          Area sum (km\up{2})&\num{279}&\num{75}&\num{87}&\num{1368}&\num{142}&\num{0,6}&\num{0,8}&\num{1871}&\num{4}&\num{4}&\num{19}&\num{1,2}&-&-&-&\num{3852} km\up{2}\\
-          % \makecell[r]{\textit{\% Map area}}&\textit{7}&\textit{2}&\textit{2}&\textit{36}&\textit{4}&\textit{0}&\textit{0}&\textit{49}&\textit{0}&\textit{0}&\textit{0}&\textit{0}&&&&\textit{100 \%}\\
-          network lenght (km)&-&-&-&-&-&-&-&-&-&-&-&-&\num{341}&\num{2841}&\num{624}&\num{3807} km
-        \end{tabular}
-      \end{center}
-    \end{table}
+    \begin{center}
+      \captionsetup{type=table}
+      \caption{Areas by land type use, lenght of hydrography and road networks }\label{tab:stats}
+      \setcellgapes{2pt}
+      \begin{tabular}{l|cccccccc|c|ccccc|c|r}
+        & \multicolumn{8}{c|}{Landscape feature}
+        & 
+        & \multicolumn{5}{c|}{Hydrography}
+        &
+        &\\
+        &\includegraphics[height=40pt]{gfx/foret_couleur.png}
+        &\includegraphics[height=40pt]{gfx/marais_couleur.png}
+        &\includegraphics[height=40pt]{gfx/vigne_couleur.png}
+        &\includegraphics[height=40pt]{gfx/landes_couleur.png}
+        &\includegraphics[height=40pt]{gfx/broussailles_couleur.png}
+        & \includegraphics[height=30pt]{gfx/domaine_couleur.png}
+        &\includegraphics[height=35pt]{gfx/escarpement_couleur.png}
+        & \rotatebox{90} {\tiny{Farmland}}
+        &\includegraphics[height=35pt]{gfx/ville_couleur.png}
+        &\includegraphics[height=25pt]{gfx/etang_couleur.png}
+        &\includegraphics[height=35pt]{gfx/riviere_large_couleur.png}
+        &\includegraphics[height=30pt]{gfx/lac_couleur.png}
+        &\includegraphics[height=30pt]{gfx/riviere_medium_couleur.png}
+        &\includegraphics[height=30pt]{gfx/riviere_small_couleur.png}
+        &\includegraphics[height=35pt]{gfx/routes_couleur.png}
+        &\textsc{Total}\\
+        Features count&257&32&111&-&150&6&-&-&37&240&-&9&-&-&-&-\\
+        Area sum (km\up{2})&\num{279}&\num{75}&\num{87}&\num{1368}&\num{142}&\num{0,6}&\num{0,8}&\num{1871}&\num{4}&\num{4}&\num{19}&\num{1,2}&-&-&-&\num{3852} km\up{2}\\
+        % \makecell[r]{\textit{\% Map area}}&\textit{7}&\textit{2}&\textit{2}&\textit{36}&\textit{4}&\textit{0}&\textit{0}&\textit{49}&\textit{0}&\textit{0}&\textit{0}&\textit{0}&&&&\textit{100 \%}\\
+        network lenght (km)&-&-&-&-&-&-&-&-&-&-&-&-&\num{341}&\num{2841}&\num{624}&\num{3807} km
+      \end{tabular}
+    \end{center}
     \vfill
     %\subsection{Pascal}
     
     %\subsection{Pascal}
     %\begin{center}
     \footnotesize
-    \begin{table}[]
-      \begin{center}
-        \captionsetup{type=table}
-        \caption{Map symbols census in the 52\up{nd} sheet of the Cassini map (1759-1777)}\label{tab:symbols}
-        \setcellgapes{1pt}
-        \begin{tabular}{cccccccccccccccc}
-          %  \hline
-          % & & & & & & & & & & & & &//
-          %\textsc{  Caractères géographiques   }&
-          %\rotatebox{90} {\textsc{Total}} &
-          %\rotatebox{90} {Villes} &
-          %\rotatebox{90} {Bourgs} &
-          %\rotatebox{90} {Clochers} &
-          %\rotatebox{90} {Abbayes} &
-          %\rotatebox{90} {Prieurés} &
-          %\rotatebox{90} {Chapelles}&
-          %\rotatebox{90} {Calvaires}&
-          %\rotatebox{90} {Châteaux} &
-          %\rotatebox{90} {Hameaux}  &
-          %\rotatebox{90} {Gentillomières} &
-          %\rotatebox{90} {Maisons} &
-          %\rotatebox{90} {Moulins à eau} &
-          %\rotatebox{90} {Moulins à vent} &
-          %\rotatebox{90} {Justice} &
-          %\rotatebox{90} {Autres lieux} \\
-          &
-          \includegraphics[height=28pt]{gfx/ville_couleur.png}&
-          \includegraphics[height=25pt]{gfx/bourg_couleur.png}&
-          \includegraphics[height=40pt]{gfx/village.pdf}&
-          \includegraphics[height=49pt]{gfx/abbaye.pdf}&
-          \includegraphics[height=30pt]{gfx/chapelle.pdf}&
-          \includegraphics[height=30pt]{gfx/cross.pdf}&
-          \includegraphics[height=45pt]{gfx/chateau.pdf} &
-          \includegraphics[height=40pt]{gfx/hameau.pdf}&
-          \includegraphics[height=35pt]{gfx/gentilhommiere.pdf}&
-          \includegraphics[height=30pt]{gfx/maison.pdf}&
-          \includegraphics[height=30pt]{gfx/moulin_a_eau.pdf}&
-          \includegraphics[height=35pt]{gfx/moulin_a_vent.pdf}&
-          \includegraphics[height=18pt]{gfx/justice.pdf}&
-          \includegraphics[height=18pt]{gfx/cabane.pdf}&
-          %\textsc{Total}\\
-          \rotatebox{90}{\textsc{Total}}\\
-          % \multicolumn{14}{|c|}{} \\
-          % \hline
-          \makecell[l]{Symbols count} & \num{15} & \num{22} & \num{234} & \num{11} & \num{93} & \num{28} & \num{196} & \num{2277} & \num{39} & \num{1135} & \num{501} & \num{1} & \num{5} & \num{6} & \num{4563}\\
-          \makecell[r]{\textit{of which unnamed}} & \textit{-} & \textit{-} & \textit{1} & \textit{2} & \textit{25} & \textit{15} & \textit{46} & \textit{28} & \textit{1} & \textit{52} & \textit{427} & \textit{-} & \textit{4} & \textit{1} & \textit{\num{601}}\\
-          & & & & & & & & & & & & & & & \\
-          % \hline
-          % \makecell[c]{\textsc{Avec toponymes}} &  &  &  &  &  &  &  &  & &  & &  &  &  & \\
-          % \makecell[c]{\textsc{Sans toponyme}} &  &  &  &  &  &  &  &  &  & & &  &  &  & \\
-          % \hline
-          %\caption{nom du tableau}
-          %\multicolumn{14}{|c|}{} \\
-        \end{tabular}
-      \end{center}
-    \end{table}
+    \begin{center}
+      \captionsetup{type=table}
+      \caption{Map symbols census in the 52\up{nd} sheet of the Cassini map (1759-1777)}\label{tab:symbols}
+      \setcellgapes{1pt}
+      \begin{tabular}{cccccccccccccccc}
+        %  \hline
+        % & & & & & & & & & & & & &//
+        %\textsc{  Caractères géographiques   }&
+        %\rotatebox{90} {\textsc{Total}} &
+        %\rotatebox{90} {Villes} &
+        %\rotatebox{90} {Bourgs} &
+        %\rotatebox{90} {Clochers} &
+        %\rotatebox{90} {Abbayes} &
+        %\rotatebox{90} {Prieurés} &
+        %\rotatebox{90} {Chapelles}&
+        %\rotatebox{90} {Calvaires}&
+        %\rotatebox{90} {Châteaux} &
+        %\rotatebox{90} {Hameaux}  &
+        %\rotatebox{90} {Gentillomières} &
+        %\rotatebox{90} {Maisons} &
+        %\rotatebox{90} {Moulins à eau} &
+        %\rotatebox{90} {Moulins à vent} &
+        %\rotatebox{90} {Justice} &
+        %\rotatebox{90} {Autres lieux} \\
+        &
+        \includegraphics[height=28pt]{gfx/ville_couleur.png}&
+        \includegraphics[height=25pt]{gfx/bourg_couleur.png}&
+        \includegraphics[height=40pt]{gfx/village.pdf}&
+        \includegraphics[height=49pt]{gfx/abbaye.pdf}&
+        \includegraphics[height=30pt]{gfx/chapelle.pdf}&
+        \includegraphics[height=30pt]{gfx/cross.pdf}&
+        \includegraphics[height=45pt]{gfx/chateau.pdf} &
+        \includegraphics[height=40pt]{gfx/hameau.pdf}&
+        \includegraphics[height=35pt]{gfx/gentilhommiere.pdf}&
+        \includegraphics[height=30pt]{gfx/maison.pdf}&
+        \includegraphics[height=30pt]{gfx/moulin_a_eau.pdf}&
+        \includegraphics[height=35pt]{gfx/moulin_a_vent.pdf}&
+        \includegraphics[height=18pt]{gfx/justice.pdf}&
+        \includegraphics[height=18pt]{gfx/cabane.pdf}&
+        %\textsc{Total}\\
+        \rotatebox{90}{\textsc{Total}}\\
+        % \multicolumn{14}{|c|}{} \\
+        % \hline
+        \makecell[l]{Symbols count} & \num{15} & \num{22} & \num{234} & \num{11} & \num{93} & \num{28} & \num{196} & \num{2277} & \num{39} & \num{1135} & \num{501} & \num{1} & \num{5} & \num{6} & \num{4563}\\
+        \makecell[r]{\textit{of which unnamed}} & \textit{-} & \textit{-} & \textit{1} & \textit{2} & \textit{25} & \textit{15} & \textit{46} & \textit{28} & \textit{1} & \textit{52} & \textit{427} & \textit{-} & \textit{4} & \textit{1} & \textit{\num{601}}\\
+        & & & & & & & & & & & & & & & \\
+        % \hline
+        % \makecell[c]{\textsc{Avec toponymes}} &  &  &  &  &  &  &  &  & &  & &  &  &  & \\
+        % \makecell[c]{\textsc{Sans toponyme}} &  &  &  &  &  &  &  &  &  & & &  &  &  & \\
+        % \hline
+        %\caption{nom du tableau}
+        %\multicolumn{14}{|c|}{} \\
+      \end{tabular}
+    \end{center}
     \vfill
   \end{multicols}
 \end{minipage}
